@@ -42,3 +42,39 @@ apt install ocaml
 dnf install ocaml
 dnf search ocaml   # List packages related to OCaml
 ```
+#### macOS
+On macOS OCaml and/or OPAM can be installed via the existing third-party package systems.
+
+
+#####Homebrew 
+```bash
+brew install ocaml
+brew install opam
+```
+#####MacPorts
+```bash
+port install ocaml
+port install opam
+```
+####FreeBSD
+```bash
+pkg install ocaml-nox11 # If you don't want X11 support
+pkg install ocaml
+pkg install ocaml-opam
+```
+####OpenBSD
+```bash
+pkg_add ocaml
+pkg_add opam
+```
+####NetBSD
+```bash
+pkg_add ocaml
+pkg_add opam
+```
+####Browser
+The following pages allow to directly try snippets of OCaml in your browser:
+
+* [Try OCaml](https://try.ocamlpro.com/) by OCamlPRO.
+* An [OCaml toplevel](http://ocsigen.org/js_of_ocaml/dev/manual/files/toplevel/index.html) compiled by the js_of_ocaml project.
+* [IOCamlJS](https://andrewray.github.io/iocamljs/) has OCaml toplevels with interactive notebook functionality.
