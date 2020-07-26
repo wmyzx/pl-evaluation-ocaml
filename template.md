@@ -95,3 +95,16 @@ OCaml, in common with other functional languages, writes and brackets function c
 ```ocaml
 repeated "hello" 3  
 ```
+### Defining a function
+The OCaml syntax is pleasantly concise. Here's a function which takes two floating point numbers and calculates the average:
+```ocaml
+let average a b =
+  (a +. b) /. 2.0;;
+```
+### Recursive functions
+Unlike in C-derived languages, a function isn't recursive unless you explicitly say so by using let rec instead of just let. Here's an example of a recursive function:
+```ocaml
+# let rec range a b =
+    if a > b then []
+    else a :: range (a+1) b;;
+```
