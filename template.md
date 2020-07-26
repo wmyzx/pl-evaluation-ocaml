@@ -89,4 +89,9 @@ OCaml comments are delimited by (* and *), like this:
  * multi-line
  * comment.
  *)
- ```
+```
+### Calling functions
+OCaml, in common with other functional languages, writes and brackets function calls differently, and this is the cause of many mistakes. Here is the same function call in OCaml:
+```ocaml
+repeated "hello" 3  
+```
