@@ -46,33 +46,33 @@ dnf search ocaml   # List packages related to OCaml
 On macOS OCaml and/or OPAM can be installed via the existing third-party package systems.
 
 
-#####Homebrew 
+##### Homebrew 
 ```bash
 brew install ocaml
 brew install opam
 ```
-#####MacPorts
+##### MacPorts
 ```bash
 port install ocaml
 port install opam
 ```
-####FreeBSD
+#### FreeBSD
 ```bash
 pkg install ocaml-nox11 # If you don't want X11 support
 pkg install ocaml
 pkg install ocaml-opam
 ```
-####OpenBSD
+#### OpenBSD
 ```bash
 pkg_add ocaml
 pkg_add opam
 ```
-####NetBSD
+#### NetBSD
 ```bash
 pkg_add ocaml
 pkg_add opam
 ```
-####Browser
+#### Browser
 The following pages allow to directly try snippets of OCaml in your browser:
 
 * [Try OCaml](https://try.ocamlpro.com/) by OCamlPRO.
