@@ -10,7 +10,7 @@ Type systems and type inference for object-oriented programming has been a hot a
 Objective Caml was the first language to combine the full power of object-oriented programming with ML-style static typing and type inference. It supports many advanced OO programming idioms (type-parametric classes, binary methods, mytype specialization) in a statically type-safe way, while these idioms cause unsoundness or require run-time type checks in other OO languages such as C++ and Java.
 
 ## How to setup OCaml in different platforms?
-#### Windows
+### Windows
 
 * First install [cygwin](https://cygwin.com/) and a few additionals
   packages: rsync, patch, diffutils, curl, make, unzip, git, m4, perl,
@@ -29,7 +29,7 @@ $ opam init default "https://github.com/fdopen/opam-repository-mingw.git#opam2" 
 $ eval $(ocaml-env cygwin)
 ```
 
-#### Linux
+### Linux
 Most Linux distributions allow OCaml and/or OPAM to be installed directly through the system package manager.
 
 ##### Ubuntu or Debian
@@ -42,7 +42,7 @@ apt install ocaml
 dnf install ocaml
 dnf search ocaml   # List packages related to OCaml
 ```
-#### macOS
+### macOS
 On macOS OCaml and/or OPAM can be installed via the existing third-party package systems.
 
 
@@ -56,23 +56,23 @@ brew install opam
 port install ocaml
 port install opam
 ```
-#### FreeBSD
+### FreeBSD
 ```bash
 pkg install ocaml-nox11 # If you don't want X11 support
 pkg install ocaml
 pkg install ocaml-opam
 ```
-#### OpenBSD
+### OpenBSD
 ```bash
 pkg_add ocaml
 pkg_add opam
 ```
-#### NetBSD
+### NetBSD
 ```bash
 pkg_add ocaml
 pkg_add opam
 ```
-#### Browser
+### Browser
 The following pages allow to directly try snippets of OCaml in your browser:
 
 * [Try OCaml](https://try.ocamlpro.com/) by OCamlPRO.
