@@ -108,6 +108,17 @@ Unlike in C-derived languages, a function isn't recursive unless you explicitly 
     if a > b then []
     else a :: range (a+1) b;;
 ```
+### Recursive Factorial Function
+```ocaml
+# let rec fact x =
+   	 if x <= 1 then 1 else x * fact (x - 1);;
+```
+### Power Function
+```ocaml
+# let rec power f n = 
+    if n = 0 then fun x -> x 
+    else compose f (power f (n - 1));;
+```
 ### Insertion Sort
 Insertion sort is defined using two recursive functions.
 ```ocaml
@@ -118,4 +129,33 @@ Insertion sort is defined using two recursive functions.
     | [] -> [elem]
     | x :: l -> if elem < x then elem :: x :: l
                 else x :: insert elem l;;
+```
+### Symbolic computation
+Let us consider simple symbolic expressions made up of integers, variables, let bindings, and binary operators. Such expressions can be defined as a new data type, as follows:
+```ocaml
+# type expression =
+    | Num of int
+    | Var of string
+    | Let of string * expression * expression
+    | Binop of string * expression * expression;;
+```
+Evaluation of these expressions involves an environment that maps identifiers to values, represented as a list of pairs.
+```ocaml
+# let rec eval env = function
+    | Num i -> i
+    | Var x -> List.assoc x env
+    | Let (x, e1, in_e2) ->
+       let val_x = eval env e1 in
+       eval ((x, val_x) :: env) in_e2
+    | Binop (op, e1, e2) ->
+       let v1 = eval env e1 in
+       let v2 = eval env e2 in
+       eval_op op v1 v2
+  and eval_op op v1 v2 =
+    match op with
+    | "+" -> v1 + v2
+    | "-" -> v1 - v2
+    | "*" -> v1 * v2
+    | "/" -> v1 / v2
+    | _ -> failwith ("Unknown operator: " ^ op);;
 ```
