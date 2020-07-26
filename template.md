@@ -108,3 +108,14 @@ Unlike in C-derived languages, a function isn't recursive unless you explicitly 
     if a > b then []
     else a :: range (a+1) b;;
 ```
+### Insertion Sort
+Insertion sort is defined using two recursive functions.
+```ocaml
+# let rec sort = function
+    | [] -> []
+    | x :: l -> insert x (sort l)
+  and insert elem = function
+    | [] -> [elem]
+    | x :: l -> if elem < x then elem :: x :: l
+                else x :: insert elem l;;
+```
